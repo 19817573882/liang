@@ -1,34 +1,36 @@
-a<-1:1000 
-b<-atan(1/a)
-
-x<-1:1000
-x<-as.numeric(x)
-y<-atan(1/x)
-z<-1/tan(y)
-
-x==z
-identical(x,z)
-all.equal(x,z)
-all.equal(x,z,tolerance = 0)
-
-true_and_missing<-c(TRUE,NA)
-false_and_missing<-c(FALSE,NA)
-any(true_and_missing,false_and_missing,mixed)
-all(true_and_missing,false_and_missing,mixed)
-
-
-options(digits = 1)
-a=runif(100,51,999)
-sum(a)
-median(a)
-mean(a)
-var(a)
-
-
+#练习1
+#问题1
+a<-1:1000        #给a赋值1～1000
+b<-atan(1/a）    #求a倒数的反正切返回值
+#问题2
+x<-1:1000        #给x赋值1～1000的整型向量
+x<-as.numeric(x) #将整型向量转化成数字向量
+y<-atan(1/x)     #将y赋值为x倒数的反正切值
+z<-1/tan(y)      #将z赋值为y切线的倒数
+#练习2
+x==z                          #比较x是否等于z
+identical(x,z)                #用identical函数比较x，z是否相等
+all.equal(x,z)                #用all.equal函数比较x，z是否相等
+all.equal(x,z,tolerance = 0)  #将容差度设置为0，用all.equal函数比较x，z是否相等
+#练习3
+true_and_missing<-c(TRUE,NA)                  #将true_and_missing赋值为TRUE,NA
+false_and_missing<-c(FALSE,NA)                #将false_and_missing赋值为FALSE,NA
+mixed<-(TRUE,FALSE,NA)                        #将mixed赋值为TRUE,FALSE,NA
+any(true_and_missing,false_and_missing,mixed) #将any函数应用于true_and_missing，false_and_missing，mixed
+all(true_and_missing,false_and_missing,mixed) #将all函数应用于true_and_missing，false_and_missing，mixed
+#练习4
+#问题1
+options(digits = 1)  #规定取的随机数为整数
+a=runif(100,51,999)  #从大于50，小于1000中取100个整数赋值为a
+sum(a)               #a求和
+median(a)            #求a的中位数
+mean(a)              #求a的平均数
+var(a)               #求a的方差
+#问题2
+d=atan(1000)         #将d赋值为1000的反正切即圆的半径
+s=pi*(d/2)^2         #计算出圆的面积赋值为s
 d=atan(1000)
-s=pi*(d/2)^2
-
-
+#问题3
 x1=2
 x2=13
 y1=3
